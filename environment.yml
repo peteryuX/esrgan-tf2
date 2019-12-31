@@ -1,0 +1,14 @@
+name: esrgan-tf2
+channels:
+  - conda-forge
+
+dependencies:
+  - python==3.7
+  - pip
+  - pip:
+    - tensorflow-gpu==2.1.0
+    - numpy
+    - opencv-python
+    - PyYAML
+    - tqdm
+    - Pillow

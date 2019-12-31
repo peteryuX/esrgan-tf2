@@ -1,0 +1,38 @@
+# general setting
+batch_size: 16
+input_size: 32
+gt_size: 128
+ch_size: 3
+scale: 4
+sub_name: 'psnr_pretrain'
+pretrain_name: null
+
+# generator setting
+network_G:
+    nf: 64
+    nb: 23
+
+# dataset setting
+train_dataset:
+    path: './data/DIV2K800_sub_bin.tfrecord'
+    num_samples: 32208
+    using_bin: True
+    using_flip: True
+    using_rot: True
+test_dataset:
+    set5_path: './data/Set5'
+    set14_path: './data/Set14'
+
+# training setting
+niter: 1000000
+lr: !!float 2e-4
+lr_steps: [200000, 400000, 600000, 800000]
+lr_rate: 0.5
+
+adam_beta1_G: 0.9
+adam_beta2_G: 0.99
+
+w_pixel: 1.0
+pixel_criterion: l1
+
+save_steps: 5000

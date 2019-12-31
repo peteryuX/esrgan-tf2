@@ -1,0 +1,10 @@
+.vscode/*
+checkpoints/*
+logs/*
+results/*
+results_interp/*
+**/__pycache__/*
+**/*.tfrecord
+**/*.zip
+data/*/**/*.png
+data/*/**/*.jpg

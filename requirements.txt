@@ -1,0 +1,6 @@
+tensorflow-gpu==2.1.0
+numpy
+opencv-python
+PyYAML
+tqdm
+Pillow
