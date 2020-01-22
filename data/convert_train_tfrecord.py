@@ -7,7 +7,6 @@ import random
 import tensorflow as tf
 
 
-# TODO: rename this code to 'convert_train_tfrecord.py', if no problem
 flags.DEFINE_string('hr_dataset_path', './data/DIV2K/DIV2K800_sub',
                     'path to high resolution dataset')
 flags.DEFINE_string('lr_dataset_path', './data/DIV2K/DIV2K800_sub_bicLRx4',
