@@ -9,8 +9,8 @@ def _parse_tfrecord(gt_size, scale, using_bin, using_flip, using_rot):
                 'image/hr_encoded': tf.io.FixedLenFeature([], tf.string),
                 'image/lr_encoded': tf.io.FixedLenFeature([], tf.string)}
             x = tf.io.parse_single_example(tfrecord, features)
-            lr_img = tf.image.decode_jpeg(x['image/lr_encoded'], channels=3)
-            hr_img = tf.image.decode_jpeg(x['image/hr_encoded'], channels=3)
+            lr_img = tf.image.decode_png(x['image/lr_encoded'], channels=3)
+            hr_img = tf.image.decode_png(x['image/hr_encoded'], channels=3)
         else:
             features = {
                 'image/img_name': tf.io.FixedLenFeature([], tf.string),
@@ -122,4 +122,5 @@ if __name__ == "__main__":
     start_time = time.time()
     for idx, (inputs, labels) in enumerate(train_dataset.take(num_samples)):
         print("{} inputs:".format(idx), inputs.shape, "outputs:", labels.shape)
+
     print("data fps: {:.2f}".format(num_samples / (time.time() - start_time)))
