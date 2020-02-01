@@ -91,7 +91,7 @@ python data/extract_subimages.py
 # Binary Image (recommend): convert slow, but loading faster when traning.
 python data/convert_train_tfrecord.py --output_path="./data/DIV2K800_sub_bin.tfrecord" --is_binary=True
 # or
-# Online Image Decoding: convert fast, but loading slower when training.
+# Online Image Loading: convert fast, but loading slower when training.
 python data/convert_train_tfrecord.py --output_path="./data/DIV2K800_sub.tfrecord" --is_binary=False
 ```
 
