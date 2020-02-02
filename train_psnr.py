@@ -48,11 +48,11 @@ def main(_):
     # load checkpoint
     checkpoint_dir = './checkpoints/' + cfg['sub_name']
     checkpoint = tf.train.Checkpoint(step=tf.Variable(0, name='step'),
-                                        optimizer=optimizer,
-                                        model=model)
+                                     optimizer=optimizer,
+                                     model=model)
     manager = tf.train.CheckpointManager(checkpoint=checkpoint,
-                                            directory=checkpoint_dir,
-                                            max_to_keep=3)
+                                         directory=checkpoint_dir,
+                                         max_to_keep=3)
     if manager.latest_checkpoint:
         checkpoint.restore(manager.latest_checkpoint)
         print('[*] load ckpt from {} at step {}.'.format(

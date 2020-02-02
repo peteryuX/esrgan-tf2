@@ -87,10 +87,9 @@ def main(_argv):
         sr_img1 = tensor2img(model(lr_img[np.newaxis, :] / 255))
         change_weight(model, vars1, vars2, 1.0)
         sr_img2 = tensor2img(model(lr_img[np.newaxis, :] / 255))
-        interp_i.append((sr_img1.astype(np.float32) * (1 - alpha) \
-            + sr_img2.astype(np.float32) * alpha).astype(np.uint8))
+        interp_i.append((sr_img1.astype(np.float32) * (1 - alpha) +
+                        sr_img2.astype(np.float32) * alpha).astype(np.uint8))
         interp_i.append(np.zeros([hr_img.shape[0], 5, 3], np.uint8))
-
 
     if FLAGS.save_image:
         base_name = os.path.basename(FLAGS.img_path)

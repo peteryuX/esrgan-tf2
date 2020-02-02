@@ -28,7 +28,7 @@ class BatchNormalization(tf.keras.layers.BatchNormalization):
        ref: https://github.com/zzh8829/yolov3-tf2
     """
     def __init__(self, axis=-1, momentum=0.9, epsilon=1e-5, center=True,
-                scale=True, name=None, **kwargs):
+                 scale=True, name=None, **kwargs):
         super(BatchNormalization, self).__init__(
             axis=axis, momentum=momentum, epsilon=epsilon, center=center,
             scale=scale, name=name, **kwargs)

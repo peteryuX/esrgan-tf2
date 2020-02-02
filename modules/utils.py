@@ -116,10 +116,10 @@ class ProgressBar(object):
         sys.stdout.flush()
 
 
-################################################################################
-#   These processing code is copied and modified from official implement:      #
-#    https://github.com/open-mmlab/mmsr                                        #
-################################################################################
+###############################################################################
+#   These processing code is copied and modified from official implement:     #
+#    https://github.com/open-mmlab/mmsr                                       #
+###############################################################################
 def imresize_np(img, scale, antialiasing=True):
     # Now the scale should be the same for H and W
     # input: img: Numpy, HWC RBG [0,1]
