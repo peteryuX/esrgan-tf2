@@ -7,8 +7,9 @@ import numpy as np
 import tensorflow as tf
 
 from modules.models import RRDB_Model
-from modules.utils import (load_yaml, imresize_np, tensor2img, rgb2ycbcr,
-                           create_lr_hr_pair, calculate_psnr, calculate_ssim)
+from modules.utils import (load_yaml, set_memory_growth, imresize_np,
+                           tensor2img, rgb2ycbcr, create_lr_hr_pair,
+                           calculate_psnr, calculate_ssim)
 
 
 flags.DEFINE_string('cfg_path', './configs/esrgan.yaml', 'config file path')
@@ -24,6 +25,7 @@ def main(_argv):
     logger = tf.get_logger()
     logger.disabled = True
     logger.setLevel(logging.FATAL)
+    set_memory_growth()
 
     cfg = load_yaml(FLAGS.cfg_path)
 
