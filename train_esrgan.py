@@ -86,7 +86,7 @@ def main(_):
     # define training step function
     @tf.function
     def train_step(lr, hr):
-        with tf.GradientTape() as tape_G, tf.GradientTape() as tape_D:
+        with tf.GradientTape(persistent=True) as tape:
             sr = generator(lr, training=True)
             hr_output = discriminator(hr, training=True)
             sr_output = discriminator(sr, training=True)
@@ -102,9 +102,9 @@ def main(_):
             total_loss_G = tf.add_n([l for l in losses_G.values()])
             total_loss_D = tf.add_n([l for l in losses_D.values()])
 
-        grads_G = tape_G.gradient(
+        grads_G = tape.gradient(
             total_loss_G, generator.trainable_variables)
-        grads_D = tape_D.gradient(
+        grads_D = tape.gradient(
             total_loss_D, discriminator.trainable_variables)
         optimizer_G.apply_gradients(
             zip(grads_G, generator.trainable_variables))
