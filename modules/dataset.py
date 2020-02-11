@@ -75,9 +75,9 @@ def _transform_images(gt_size, scale, using_flip, using_rot):
             def rot270_func(): return (tf.image.rot90(lr_img, k=3),
                                        tf.image.rot90(hr_img, k=3))
             lr_img, hr_img = tf.case(
-                [(tf.equal(flip_case, 0), rot90_func),
-                 (tf.equal(flip_case, 1), rot180_func),
-                 (tf.equal(flip_case, 2), rot270_func)],
+                [(tf.equal(rot_case, 0), rot90_func),
+                 (tf.equal(rot_case, 1), rot180_func),
+                 (tf.equal(rot_case, 2), rot270_func)],
                 default=lambda: (lr_img, hr_img))
 
         # scale to [0, 1]

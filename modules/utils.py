@@ -308,7 +308,7 @@ def calculate_ssim(img1, img2):
     elif img1.ndim == 3:
         if img1.shape[2] == 3:
             ssims = []
-            for i in range(3):
+            for _ in range(3):
                 ssims.append(_ssim(img1, img2))
             return np.array(ssims).mean()
         elif img1.shape[2] == 1:
