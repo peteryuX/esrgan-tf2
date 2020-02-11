@@ -4,8 +4,6 @@ import os
 import numpy as np
 import tensorflow as tf
 
-from tensorflow.keras.callbacks import ModelCheckpoint, TensorBoard
-
 from modules.models import RRDB_Model, DiscriminatorVGG128
 from modules.lr_scheduler import MultiStepLR
 from modules.losses import (PixelLoss, ContentLoss, DiscriminatorLoss,
