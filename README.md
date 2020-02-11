@@ -51,7 +51,7 @@ cd esrgan-tf2
 ## Data Preparing
 :beer:
 
-All datasets used in this repository follow the [offcial implement](https://github.com/open-mmlab/mmsr/blob/master/datasets/DATASETS.md) as same as possible. This code focus on implementation of x4 version.
+All datasets used in this repository follow the [official implement](https://github.com/open-mmlab/mmsr/blob/master/datasets/DATASETS.md) as same as possible. This code focus on implementation of x4 version.
 
 ### Training Dataset
 
