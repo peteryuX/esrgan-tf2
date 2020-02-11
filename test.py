@@ -40,8 +40,8 @@ def main(_argv):
         print("[*] load ckpt from {}.".format(
             tf.train.latest_checkpoint(checkpoint_dir)))
     else:
-        print("[*] Cannot find ckpt from {}.".format(
-            tf.train.latest_checkpoint(checkpoint_dir)))
+        print("[*] Cannot find ckpt from {}.".format(checkpoint_dir))
+        exit()
 
     # evaluation
     if FLAGS.img_path:
