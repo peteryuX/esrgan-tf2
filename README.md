@@ -28,6 +28,12 @@ Offical Implementation: &nbsp; [PyTorch](https://github.com/open-mmlab/mmsr)
 
 Create a new python virtual environment by [Anaconda](https://www.anaconda.com/) or just use pip in your python environment and then clone this repository as following.
 
+### Clone this repo
+```bash
+git clone https://github.com/peteryuX/esrgan-tf2.git
+cd esrgan-tf2
+```
+
 ### Conda
 ```bash
 conda env create -f environment.yml
@@ -38,12 +44,6 @@ conda activate esrgan-tf2
 
 ```bash
 pip install -r requirements.txt
-```
-
-### Clone this repo
-```bash
-git clone git@github.com:peteryuX/esrgan-tf2.git
-cd esrgan-tf2
 ```
 
 ****
