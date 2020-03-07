@@ -7,6 +7,8 @@
 
 :fire: ESRGAN (Enhanced Super-Resolution Generative Adversarial Networks, published in ECCV 2018) implemented in Tensorflow 2.0+. This is an unofficial implementation. :fire:
 
+>  ESRGAN introduce the Residual-in-Residual Dense Block (RRDB) without batch normalization as the basic network building unit, the idea from relativistic GAN to let the discriminator predict relative realness, and the perceptual loss by using the features before activation. Benefiting from these improvements, the proposed ESRGAN achieves consistently better visual quality with more realistic and natural textures than SRGAN and won the first place in the PIRM2018-SR Challenge.
+
 Original Paper: &nbsp; [Arxiv](https://arxiv.org/abs/1809.00219) &nbsp; [ECCV2018](http://openaccess.thecvf.com/content_eccv_2018_workshops/w25/html/Wang_ESRGAN_Enhanced_Super-Resolution_Generative_Adversarial_Networks_ECCVW_2018_paper.html)
 
 Offical Implementation: &nbsp; [PyTorch](https://github.com/open-mmlab/mmsr)
