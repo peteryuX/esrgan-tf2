@@ -1,9 +1,11 @@
 # [esrgan-tf2](https://github.com/peteryuX/esrgan-tf2)
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/peteryuX/esrgan-tf2/blob/master/notebooks/colab-github-demo.ipynb)
+[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/peteryuX/esrgan-tf2.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/peteryuX/esrgan-tf2/context:python)
 ![Star](https://img.shields.io/github/stars/peteryuX/esrgan-tf2)
 ![Fork](https://img.shields.io/github/forks/peteryuX/esrgan-tf2)
 ![License](https://img.shields.io/github/license/peteryuX/esrgan-tf2)
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/peteryuX/esrgan-tf2/blob/master/notebooks/colab-github-demo.ipynb)
 
 :fire: ESRGAN (Enhanced Super-Resolution Generative Adversarial Networks, published in ECCV 2018) implemented in Tensorflow 2.0+. This is an unofficial implementation. :fire:
 
