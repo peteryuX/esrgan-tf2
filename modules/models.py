@@ -1,15 +1,7 @@
 import functools
 import tensorflow as tf
-from tensorflow.python import keras
 from tensorflow.keras import Model
-from tensorflow.keras.layers import (
-    Dense,
-    Dropout,
-    Flatten,
-    Input,
-    Conv2D,
-    LeakyReLU
-)
+from tensorflow.keras.layers import Dense, Flatten, Input, Conv2D, LeakyReLU
 
 
 def _regularizer(weights_decay=5e-4):

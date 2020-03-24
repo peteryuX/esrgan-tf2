@@ -103,7 +103,7 @@ python data/convert_train_tfrecord.py --output_path="./data/DIV2K800_sub.tfrecor
 ```
 
 Note:
-- You can run `python .\modules\dataset.py` to check if the dataloader work.
+- You can run `python ./dataset_checker.py` to check if the dataloader work.
 
 ### Testing Dataset
 
