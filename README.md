@@ -418,6 +418,7 @@ Note:
 - After dowloading these models, extract them into `./checkpoints` for restoring.
 - The inference version was saved without any tranning operator, which is smaller than the original version. However, if you want to finetune, the orginal version is more suitable.
 - All training settings of the models can be found in the corresponding [./configs/*.yaml](https://github.com/peteryuX/esrgan-tf2/tree/master/configs) files.
+- **Based on the property of the training dataset, all the pre-trained models can only be used for non-commercial applications.**
 
 ****
 
